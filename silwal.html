@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patan Durbar Square Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 10;
+            padding: 0;
+            background-color: #d8cdcd;
+        }
+        header {
+            background: #946565;
+            color: rgb(253, 228, 228);
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #ac9b9b;
+            padding: 10px;
+        }
+        nav a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+        nav a:hover {
+            color: #f7f7fc;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .main-content {
+            flex: 3;
+            background: rgb(177, 168, 168);
+            padding: 35px;
+            border-radius: 30px;
+            margin-right: 2px;
+        }
+        .sidebar {
+            flex: 1;
+            background: rgb(177,168,168);
+            padding: 20px;
+            border-radius: 30px;
+            color: rgb(32, 20, 20);
+        }
+        .post img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        footer {
+            background: #9c6f6f;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .main-content, .sidebar {
+                margin: 0 0 20px 0;
+            }
+        }
+    </style>
+    <script>
+        function showContent(section) {
+            const content = document.getElementById("home");
+            if (section === 'home') {
+                content.innerHTML = `<h2>Introduction</h2>
+                    <img src="https://images.pexels.com/photos/2410391/pexels-photo-2410391.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Patan Durbar Square" style="width: 100%; height: auto;">
+                    <p>Patan Durbar Square is a UNESCO World Heritage Site and one of the three Durbar Squares in the Kathmandu Valley. It showcases exquisite Newari architecture, beautiful temples, and a rich history that dates back centuries.</p>`;
+            } else if (section === 'about') {
+                content.innerHTML = `<h2>History & Architecture</h2>
+                    <img src="https://images.pexels.com/photos/14367175/pexels-photo-14367175.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Krishna Mandir" style="width: 100%; height: auto;">
+                    <p>The square is home to the famous Krishna Mandir, Bhimsen Temple, and numerous other historical monuments. Built mainly in the 16th and 17th centuries, it reflects the artistic and architectural brilliance of the Malla kings.</p>`;
+            } else if (section === 'contact') {
+                content.innerHTML = `<h2>Contact Information</h2>
+                    <p><strong>Name:</strong> Patan Durbar Square Office</p>
+                    <p><strong>Phone No:</strong> +977-1-5521010</p>
+                    <p><strong>Address:</strong> Patan, Lalitpur, Nepal</p>`;
+            } else if (section === 'historical') {
+                content.innerHTML = `<h2>Historical Sites</h2>
+                <img src="https://images.pexels.com/photos/7919832/pexels-photo-7919832.jpeg?auto=compress&cs=tinysrgb&w=600">
+                    <p>Explore the historical sites of Patan Durbar Square, showcasing centuries-old temples and palaces, each with intricate carvings and royal architecture.</p>`;
+            } else if (section === 'unesco') {
+                content.innerHTML = `<h2>UNESCO Heritage</h2>
+                    <p>Patan Durbar Square is a UNESCO World Heritage Site, preserving its historical and cultural significance through its timeless monuments and architecture.</p>`;
+            } else if (section === 'architecture') {
+                content.innerHTML = `<h2>Newari Architecture</h2>
+                    <p>The square boasts stunning Newari architecture, with intricate woodwork, detailed sculptures, and an impressive array of temples, each showcasing the skills of ancient artisans.</p>`;
+            } else if (section === 'travel') {
+                content.innerHTML = `<h2>Travel Tips</h2>
+                    <p>Plan your visit to Patan Durbar Square with these essential travel tips. Don't forget to explore the nearby restaurants and traditional shops that showcase local art and handicrafts.</p>`;
+            } else if (section === 'culture') {
+                content.innerHTML = `<h2>Culture & Festivals</h2>
+                <img src="https://media.istockphoto.com/id/1414527682/photo/lakhey-dance.jpg?b=1&s=612x612&w=0&k=20&c=SiW1nZNRvLbw3CdUOqjItCTSo9xe31D9-vFz7cIsRMo=">
+                <img src="https://images.pexels.com/photos/27364558/pexels-photo-27364558/free-photo-of-photo-of-an-elderly-man-wearing-orange-robes-face-painting-and-a-headdress.jpeg?auto=compress&cs=tinysrgb&w=600">
+                <img src="https://images.pexels.com/photos/1274922/pexels-photo-1274922.jpeg?auto=compress&cs=tinysrgb&w=600">
+                    <p>Discover the vibrant culture and festivals celebrated at Patan Durbar Square. Major festivals include Indra Jatra and the New Year celebrations, where locals celebrate with music, dance, and rituals.</p>`;
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Patan Durbar Square</h1>
+    </header>
+    <nav>
+        <a onclick="showContent('home')">Home</a>
+        <a onclick="showContent('about')">About</a>
+        <a onclick="showContent('contact')">Contact</a>
+    </nav>
+    <div class="container">
+        <div class="main-content" id="home">
+            <h2>Introduction</h2>
+            <img src="https://images.pexels.com/photos/13112395/pexels-photo-13112395.jpeg?auto=compress&cs=tinysrgb&w=600 alt="Patan Durbar Square" style="width: 100%; height: auto;">
+            <p>Patan Durbar Square is a UNESCO World Heritage Site and one of the three Durbar Squares in the Kathmandu Valley. It showcases exquisite Newari architecture, beautiful temples, and rich history.</p>
+        </div>
+        <div class="sidebar">
+            <h3>Explore More</h3>
+            <ul>
+                <li><a onclick="showContent('about')">History & Architecture</a></li>
+                <li><a onclick="showContent('historical')">Historical Sites</a></li>
+                <li><a onclick="showContent('unesco')">UNESCO Heritage</a></li>
+                <li><a onclick="showContent('travel')">Travel Tips</a></li>
+                <li><a onclick="showContent('culture')">Culture & Festivals</a></li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p>© 2025 Patan Durbar Square Blog. All rights reserved.</p>
+    </footer>
+</body>
+</html>
